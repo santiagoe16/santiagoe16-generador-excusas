@@ -13,22 +13,20 @@ let when = [
   "when I was sleeping",
   "while I was exercising",
   "during my lunch",
-  "while I was praying"
+  "while I was praying",
 ];
 
-function numRandom(array) {
-  return Math.floor(Math.random() * array.length);
-  return ar;
-  r;
+function getElementRandom(array) {
+  return array[Math.floor(Math.random() * array.length)];
 }
 
 document.body.onload = function() {
   document.getElementById("excuse").innerHTML =
-    who[numRandom(who)] +
+    getElementRandom(who) +
     " " +
-    action[numRandom(action)] +
+    getElementRandom(action) +
     " " +
-    what[numRandom(what)] +
+    getElementRandom(what) +
     " " +
-    when[numRandom(when)];
+    getElementRandom(when);
 };
