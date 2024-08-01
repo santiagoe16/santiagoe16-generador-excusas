@@ -16,18 +16,19 @@ let when = [
   "while I was praying"
 ];
 
-let whoRandom = Math.floor(Math.random() * 4);
-let actionRandom = Math.floor(Math.random() * 4);
-let whatRandom = Math.floor(Math.random() * 3);
-let whenRandom = Math.floor(Math.random() * 5);
+function numRandom(array) {
+  return Math.floor(Math.random() * array.length);
+  return ar;
+  r;
+}
 
 document.body.onload = function() {
   document.getElementById("excuse").innerHTML =
-    who[whoRandom] +
+    who[numRandom(who)] +
     " " +
-    action[actionRandom] +
+    action[numRandom(action)] +
     " " +
-    what[whatRandom] +
+    what[numRandom(what)] +
     " " +
-    when[whenRandom];
+    when[numRandom(when)];
 };
